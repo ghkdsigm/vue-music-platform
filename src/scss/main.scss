@@ -1,0 +1,50 @@
+// Default variable overrides
+$primary:royalblue;
+
+@-webkit-keyframes sdb {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes sdb {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes bg-scrolling-reverse{to{background-position:120px 120px}}
+@keyframes bg-scrolling-reverse{to{background-position:120px 120px}}
+@keyframes bg-scrolling{0%{background-position:120px 120px}}
+
+   
+$container-max-widths: (
+    sm:540px,
+    md:704px,
+    lg:924px,
+    xl:1140px,
+    xxl:1460px
+);
+
+// Required
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+@import "../../node_modules/pageable/src/pageable"
+
