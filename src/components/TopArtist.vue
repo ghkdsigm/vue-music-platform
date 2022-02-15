@@ -3,10 +3,10 @@
         <a target="_blank">            
             <div class="info">                  
                 <span class="playcount">
-                    총 {{ item.playcount }} 번 재생
+                    총 <span class="pc">{{ item.playcount }}</span> 번 재생
                 </span>
                 <span class="listeners">
-                    총 {{ item.listeners }} 명의 청취자
+                    총 <span class="ls">{{ item.listeners }}</span> 명의 청취자
                 </span>
                 <span class="artist">
                     {{ item.name }}
@@ -83,6 +83,12 @@ img {
             font-weight: 300;
             &:last-child{
                 text-align: center;                
+            }
+            .pc {
+                color:rgb(204, 178, 33);
+            }
+            .ls {
+                color:rgb(204, 178, 33);
             }
         } 
         .artist {
