@@ -5,12 +5,12 @@
             <!-- <div>{{ music.image.pop([i])["#text"] }}</div> -->
             <!-- <div class="poster" :style="{backgroundImage: `url(${img})`}"></div> -->
             <div class="info">
-                <div class="year">
-                    {{ music.artist }}
-                </div>
                 <div class="title">
                     {{ music.name }}
                 </div>
+                <div class="artistName">
+                    {{ music.artist }}
+                </div>                
             </div> 
         </a>
     </div> 
@@ -35,10 +35,13 @@ export default {
 
 <style lang="scss" scoped>
 img {
-        height:220px;
-        border:3px solid transparent;
-        &:hover {
-            border:3px solid #f953c6;
-        }
+    height:220px;
+    border:3px solid transparent;
+    &:hover {
+        border:3px solid #f953c6;
     }
+}
+.artistName {
+    opacity: 0.6;
+}
 </style>

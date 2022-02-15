@@ -3,10 +3,11 @@
         <a :href='item.url' target="_blank">            
             <img :src='item.image.pop([3])["#text"]' alt="" width="200" @error="replaceByDefault" />
             <div class="info">
-                <div class="year">
-                </div>
                 <div class="title">
                     {{ item.name }}
+                </div>
+                <div class="artistName">
+                    {{ item.artist.name }}
                 </div>
             </div> 
         </a>
@@ -67,6 +68,9 @@ img {
         overflow: hidden;    
         max-width: 200px;
         margin: 0 auto;
-    }          
+    }    
+    .artistName {
+        opacity: 0.6;
+    }      
 }
 </style>
