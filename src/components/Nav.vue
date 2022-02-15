@@ -42,7 +42,7 @@ export default {
                  href: '/'
              },
              {
-                 name: '최신앨범',
+                 name: 'TOP 아티스트',
                  href: '/Recent'
              },
              {

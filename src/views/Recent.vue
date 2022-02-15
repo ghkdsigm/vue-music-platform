@@ -1,5 +1,5 @@
 <template>
-  <h2 class="end_title">최신 앨범</h2>
+  <h2 class="end_title">Top 아티스트</h2>
   <div class="sub_list">
       <ul>
           <TopArtist />         
