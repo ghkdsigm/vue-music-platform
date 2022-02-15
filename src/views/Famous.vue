@@ -1,16 +1,19 @@
 <template>
-  <h2 class="end_title">BEST TOP 50</h2>
+  <h2 class="end_title">장르별 뮤직</h2>
   <div class="sub_list">
       <ul>
-          <li class="list_item">
-              
-          </li>
+          <Category />         
       </ul>
   </div>
 </template>
 
 <script>
+import Category from '~/components/Category'
+
 export default {
+    components:{
+        Category
+    }
 
 }
 </script>

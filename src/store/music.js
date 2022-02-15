@@ -116,7 +116,36 @@ export default {
  
 
                   
-        },        
+        },     
+        async searchNewMusic({ commit }, payload){
+            const {title, artist, image} = payload              
+                     
+            //음악 api (spotify)----------------
+            const res = {
+                method: 'GET',
+                    url: 'https://spotify23.p.rapidapi.com/search/',
+                    params: {q: `${title}`, type: 'albums', offset: '0', limit: '1', numberOfTopResults: '5'},
+                    headers: {
+                        'x-rapidapi-host': 'spotify23.p.rapidapi.com',
+                        'x-rapidapi-key': '8ab0ba4a09msh838d3cdc2c00a56p158278jsnc416649a319c'
+                    }
+                };
+              
+              axios.request(res).then(function (response) {
+                
+                   console.log(response.data);                
+                //    console.log(response.data.query);
+                //    console.log(response.data.albums.items[i].data.name);
+                //    console.log(response.data.albums.items[i].data.coverArt.sources[2].url);
+                //    console.log(response.data.albums.items[i].data.date.year);  
+                  
+              }).catch(function (error) {
+                  console.error(error);
+              });
+ 
+
+                  
+        },    
     }    
 
 }

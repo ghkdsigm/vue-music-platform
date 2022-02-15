@@ -85,10 +85,10 @@ img {
                 text-align: center;                
             }
             .pc {
-                color:rgb(204, 178, 33);
+                color:rgb(172, 172, 172);                
             }
             .ls {
-                color:rgb(204, 178, 33);
+                color:rgb(172, 172, 172);               
             }
         } 
         .artist {
