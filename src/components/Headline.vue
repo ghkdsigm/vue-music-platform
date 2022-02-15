@@ -8,9 +8,10 @@
         <div class="text_area">
             <span class="genre">Pop</span>
             <strong class="title">Play Count #{{top.playcount}} :  {{ top.name }}</strong>
-            <div class="info"> 오랜만에 신곡으로 돌아온 체인스모커스, 강렬한 임팩트를 주는 이진아의 신곡까지. 지금 주목해야 할 멋진 신곡들을 VIBE 매거진에서 확인하세요. 글 : 박희아, 이대화 </div>
+            <div class="info"> MUSIC.ALBUMS이 추천하는 지금 뜨는 노래 한번 들어보세요! </div>
             <div class="sub"></div>
-            <span class="item"> VIBE MAG </span><span class="item">2022.02.07</span>
+            <span class="item"> VIBE MAG </span><span class="item">{{ today }}</span>
+            <a :href="top.url"  target="_blank" class="linkTo">바로가기</a>
         </div> 
     </div>
   </div>  
@@ -18,12 +19,17 @@
 
 <script>
 import { fetchMusicList } from '../api/index.js'
+import dayjs from 'dayjs'
 
 export default {
+    components:{
+        dayjs
+    },
     data(){
         return {
             top:[],
-            image:[]
+            image:[],
+            today: dayjs().format("YYYY-MM-DD")
         }
     },
     created() {        
@@ -153,6 +159,11 @@ export default {
                     vertical-align: top;
                     color: hsla(0,0%,100%,.6);
                 }
+            }
+            .linkTo{
+                position: absolute;
+                display: block;
+                margin-top: 25px;
             }
         }
 
