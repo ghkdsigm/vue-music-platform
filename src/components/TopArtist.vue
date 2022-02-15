@@ -62,7 +62,7 @@ img {
 .music_list {
     width:100%;
     display: inline-block;
-    padding: 15px 25px 15px;
+    padding: 10px 25px 10px;
     box-sizing: border-box;
     vertical-align: top;      
     border-bottom: 1px solid #242424;
@@ -79,7 +79,8 @@ img {
         display:flex;
         span {
             min-width: 25%;
-            font-size:18px;
+            font-size: 16px;
+            font-weight: 300;
             &:last-child{
                 text-align: center;                
             }
