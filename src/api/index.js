@@ -4,7 +4,7 @@ import axios from 'axios';
 const config = {
     baseUrl : 'https://ws.audioscrobbler.com/2.0/',    
     API_KEY : 'f21088bf9097b49ad4e7f487abab981e',
-    USER : ['lover','lj','DiffusedOctaves','redbeanbunny','daocent','simptilda','sidneyphillipz','ccckmp','crustywaffleman','Apohrnstre','Dano1200','heatlightnings','kaantsas13'],
+    USER : ['lover','lj','DiffusedOctaves','redbeanbunny','daocent','simptilda','sidneyphillipz','ccckmp','crustywaffleman','Apohrnstre','Dano1200','heatlightnings','kaantsas13','Angiebts7','Byool','GirlbossOTY','KisaragiHina','Cat_MK','BeyondDoom','SebastianSousa','g-eo','BeeTheBlood','Lucas153','qgabrielq','Thejuliusstan8','lovatruly'],
 }
 
 //2. API 함수들을 정리
