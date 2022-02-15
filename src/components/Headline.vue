@@ -2,22 +2,54 @@
   <div class="link_wrap">
     <div class="link">
         <div class="thumb">
-            <img src="https://www.geo.tv/assets/uploads/updates/2022-02-12/398776_2808912_updates.jpg" alt="" class="img_pc">
+            <img :src='image' alt="" class="img_pc"  @error="replaceByDefault">
         </div>
+       
         <div class="text_area">
             <span class="genre">Pop</span>
-            <strong class="title">New Release #78 : 체인스모커스, 이진아</strong>
+            <strong class="title">Play Count #{{top.playcount}} :  {{ top.name }}</strong>
             <div class="info"> 오랜만에 신곡으로 돌아온 체인스모커스, 강렬한 임팩트를 주는 이진아의 신곡까지. 지금 주목해야 할 멋진 신곡들을 VIBE 매거진에서 확인하세요. 글 : 박희아, 이대화 </div>
             <div class="sub"></div>
             <span class="item"> VIBE MAG </span><span class="item">2022.02.07</span>
-        </div>
+        </div> 
     </div>
   </div>  
 </template>
 
 <script>
-export default {
+import { fetchMusicList } from '../api/index.js'
 
+export default {
+    data(){
+        return {
+            top:[],
+            image:[]
+        }
+    },
+    created() {        
+        const vm = this;
+        fetchMusicList()
+            .then(function(response){
+                let musicList = response.data.topalbums.album;     
+                for (let i = 0; i < musicList.length; i++) {
+                    let musicList2 = response.data.topalbums.album[0]["image"].pop([i])["#text"];
+                    let deepList = musicList[0]
+                    let list2 = musicList2                    
+                    let list = deepList                 
+                    vm.top = list; 
+                    vm.image = list2;
+                    break
+                 }                         
+            })
+            .catch(function(error){
+                console.log(error);
+            })
+    },
+    methods: {
+        replaceByDefault(e) {
+        e.target.src = 'https://allforyoung-maycan-seoul.s3.ap-northeast-2.amazonaws.com/uploads/description/2021/01/28/3a5f6864-6e64-4b70-9d11-874acbf1b139.jpg'
+        }
+    }
 }
 </script>
 
@@ -40,7 +72,6 @@ export default {
             .img_pc {
                 position: relative;
                 width: 100%;
-                height: 100%;
             }
         }
         .text_area {

@@ -1,10 +1,10 @@
 <template>  
     <div class="music_list">
-        <a :href="music.url">
-            <img :src='music.image.pop([i])["#text"]' alt="" width="200" />
+        <a :href="music.url" target="_blank">
+            <img :src='music.image.pop([3])["#text"]' alt="" width="200" @error="replaceByDefault" />
             <!-- <div>{{ music.image.pop([i])["#text"] }}</div> -->
             <!-- <div class="poster" :style="{backgroundImage: `url(${img})`}"></div> -->
-             <div class="info">
+            <div class="info">
                 <div class="year">
                     {{ music.artist }}
                 </div>
@@ -23,6 +23,11 @@ export default {
             type:Object,
             default:() => ({})
         }         
+    },
+    methods: {
+        replaceByDefault(e) {
+        e.target.src = 'https://allforyoung-maycan-seoul.s3.ap-northeast-2.amazonaws.com/uploads/description/2021/01/28/3a5f6864-6e64-4b70-9d11-874acbf1b139.jpg'
+        }
     }
     
 }
@@ -31,5 +36,9 @@ export default {
 <style lang="scss" scoped>
 img {
         height:220px;
+        border:3px solid transparent;
+        &:hover {
+            border:3px solid #f953c6;
+        }
     }
 </style>

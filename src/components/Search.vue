@@ -1,6 +1,6 @@
 <template>
     <span class="input_area">
-        <input type="search" id="search_keyword" title="검색창" placeholder="Music 검색" autocomplete="off" class="input_search" v-model="title" @keyup.enter="apply"/>
+        <input type="search" id="search_keyword" title="검색창" placeholder="앨범 검색" autocomplete="off" class="input_search" v-model="title" @keyup.enter="apply"/>
         <span class="icon_search"></span>                       
     </span>    
 </template>
@@ -42,7 +42,7 @@ export default {
         text-overflow: ellipsis;
         white-space: nowrap;
         word-break: break-all;
-        padding: 10px 36px 10px 44px;
+        padding: 10px 20px 10px;
         width: 100%;
         height: 40px;
         border: 0;

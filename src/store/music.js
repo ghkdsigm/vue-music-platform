@@ -66,8 +66,6 @@ export default {
                                         
                  }
                 
-                //console.log(response);
-                
             }).catch(function (error) {
                 console.error(error);
             });

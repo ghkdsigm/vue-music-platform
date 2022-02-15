@@ -1,6 +1,6 @@
 <template>
     <RouterLink to="/" class="logo">
-        <span>HSH</span>.MUSIC
+        <span>MUSIC</span>.ALBUMS
     </RouterLink>
 </template>
 

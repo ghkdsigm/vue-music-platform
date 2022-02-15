@@ -2,15 +2,18 @@
   <h2 class="end_title">최신 앨범</h2>
   <div class="sub_list">
       <ul>
-          <li class="list_item" v-for="item in items" :key="item">
-              {{item}}
-          </li>
+          <TopArtist />         
       </ul>
   </div>
 </template>
 
 <script>
+import TopArtist from '~/components/TopArtist'
+
 export default {
+    components:{
+        TopArtist
+    }
 
 }
 </script>
