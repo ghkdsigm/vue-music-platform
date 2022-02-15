@@ -1,6 +1,6 @@
 <template>      
     <div class="music_list" v-for="item in recents" :key="item">
-        <a target="_blank">            
+        <a :href='item.url' target="_blank">            
             <img :src='item.image.pop([3])["#text"]' alt="" width="200" @error="replaceByDefault" />
             <div class="info">
                 <div class="year">
