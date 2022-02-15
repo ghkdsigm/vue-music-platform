@@ -17,8 +17,9 @@ export default {
 
      },
      methods:{        
-         async apply(){
-             // searchmovie..    
+         async apply(e){
+             // searchmovie.. 
+             e.preventDefault();   
              this.$store.dispatch('music/searchMusics', {
                  title: this.title,
                  artist: this.artist,
