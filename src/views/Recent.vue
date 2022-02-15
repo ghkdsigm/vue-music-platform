@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .sub_list {margin-top:20px;}
 .end_title{
     padding-bottom: 20px;

@@ -21,5 +21,4 @@ export default {
     display: flex;
     margin-top:50px;
 }
-
 </style>

@@ -44,7 +44,6 @@
             padding-top:15px;    
             font-weight: 300;
         }
-    }
-    
+    }    
 }
 </style>

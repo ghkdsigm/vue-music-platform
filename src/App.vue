@@ -24,16 +24,14 @@ export default ({
 
 <style lang="scss" scoped>
 @import "~/scss/main";
-
-    .home{
-        background-color: #000;
-        position: relative;
-        min-height: 100%;
-        overflow-x: hidden;
-        .containerWrap {
-            max-width: 1920px;
-            margin: 0 auto;
-        }
+.home{
+    background-color: #000;
+    position: relative;
+    min-height: 100%;
+    overflow-x: hidden;
+    .containerWrap {
+        max-width: 1920px;
+        margin: 0 auto;
     }
-
+}
 </style>
