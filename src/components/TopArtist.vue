@@ -1,7 +1,10 @@
 <template>  
-    <li class="music_list" v-for="item in recents" :key="item">
+    <li class="music_list" v-for="(item, index) in recents" :key="index">
         <a target="_blank">            
             <div class="info">                  
+                <span class="index">
+                     <span class="pc">{{ index }}</span>
+                </span>
                 <span class="playcount">
                     총 <span class="pc">{{ item.playcount }}</span> 번 재생
                 </span>
@@ -78,7 +81,7 @@ img {
         overflow: hidden; 
         display:flex;
         span {
-            min-width: 25%;
+            min-width: 18%;
             font-size: 16px;
             font-weight: 300;
             &:last-child{
@@ -89,6 +92,9 @@ img {
             }
             .ls {
                 color:rgb(172, 172, 172);               
+            }
+            &:last-child{
+                width:26%;
             }
         } 
         .artist {
