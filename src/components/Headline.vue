@@ -89,7 +89,7 @@ export default {
             box-sizing: border-box;
             background: no-repeat 50%;
             background-size: 2000px;
-            background-image:url(https://music-phinf.pstatic.net/20220207_162/1644214553488WKdlP_JPEG/%C4%BF%B9%F61.jpg?type=f720_720_b50);
+            // background-image:url(https://music-phinf.pstatic.net/20220207_162/1644214553488WKdlP_JPEG/%C4%BF%B9%F61.jpg?type=f720_720_b50);
             &::before {
                 position: absolute;
                 top: 0;
