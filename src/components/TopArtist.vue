@@ -81,9 +81,14 @@ img {
         overflow: hidden; 
         display:flex;
         span {
-            min-width: 18%;
+            min-width: 16%;
             font-size: 16px;
             font-weight: 300;
+            &:first-child{
+                width:5%;
+                text-align: center;
+                padding: 0 5% 0 0;
+            }
             &:last-child{
                 text-align: center;                
             }
@@ -94,7 +99,7 @@ img {
                 color:rgb(172, 172, 172);               
             }
             &:last-child{
-                width:26%;
+                width:31%;
             }
         } 
         .artist {
