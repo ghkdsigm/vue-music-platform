@@ -48,7 +48,7 @@ export default {
 
 <style lang="scss" scoped>
 img {
-        height:220px;
+        width:90%;
         border:3px solid transparent;
         &:hover {
             border:3px solid #f953c6;
