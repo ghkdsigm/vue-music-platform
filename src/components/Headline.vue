@@ -10,7 +10,7 @@
             <strong class="title">Play Count #{{top.playcount}} :  {{ top.name }}</strong>
             <div class="info"> MUSIC.ALBUMS이 추천하는 지금 뜨는 노래 한번 들어보세요! </div>
             <div class="sub"></div>
-            <span class="item"> VIBE MAG </span><span class="item">{{ today }}</span>
+            <span class="item"> MA Recommend </span><span class="item">{{ today }}</span>
             <a :href="top.url"  target="_blank" class="linkTo">바로가기</a>
         </div> 
     </div>
