@@ -3,7 +3,7 @@
         <a target="_blank">            
             <div class="info">                  
                 <span class="index">
-                     <span class="pc">{{ index }}</span>
+                     <span class="pc">{{ index + 1}}</span>
                 </span>
                 <span class="playcount">
                     총 <span class="pc">{{ item.playcount }}</span> 번 재생
