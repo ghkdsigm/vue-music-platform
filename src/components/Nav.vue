@@ -46,7 +46,7 @@ export default {
                  href: '/Recent'
              },
              {
-                 name: 'BEST TOP 50',
+                 name: '장르별 뮤직',
                  href: '/Famous'
              }
          ]

@@ -19,6 +19,7 @@ export default {
 </script>
 
 <style>
+.sub_list {margin-top:20px;}
 .end_title{
     padding-bottom: 20px;
     font-size: 38px;

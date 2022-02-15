@@ -39,6 +39,16 @@
             <img src="https://music-phinf.pstatic.net/20181204_193/1543918895074bt55B_PNG/mood_10_Relax.png?type=f360"/>
         </a>
     </li> 
+    <li class="music_list">
+        <a>            
+            <img src="https://music-phinf.pstatic.net/20181204_31/1543918854261L2yhu_PNG/mood_6_Broken.png?type=f360"/>
+        </a>
+    </li> 
+    <li class="music_list">
+        <a>            
+            <img src="https://music-phinf.pstatic.net/20181204_143/1543918860459dh7Hq_PNG/mood_7_Focus.png?type=f360"/>
+        </a>
+    </li> 
 </template>
 
 <script>
@@ -56,7 +66,7 @@ img {
         }
     }
 .music_list {
-    width:250px;
+    width:20%;
     display: inline-block;
     padding: 0 0 50px 0;
     box-sizing: border-box;
