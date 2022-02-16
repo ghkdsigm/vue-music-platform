@@ -8,7 +8,9 @@ export default {
     state:() => ({
         musics:[],  
         title:'',
-        poster:''   
+        poster:'',
+        pics:[],
+        group:'' 
     }),
 
     // computed !
@@ -25,6 +27,13 @@ export default {
        
         setapiValue(state, payload){
             state.musics = payload;
+        },
+
+        setapiValue2(state, payload){
+            state.pics = payload
+        },
+        setapiValue3(state, payload){
+            state.group = payload
         },
         resetMovies(state){
             state.musics = []
@@ -124,27 +133,30 @@ export default {
             const res = {
                 method: 'GET',
                     url: 'https://spotify23.p.rapidapi.com/search/',
-                    params: {q: `${title}`, type: 'albums', offset: '0', limit: '1', numberOfTopResults: '5'},
+                    params: {q: `${title}`, type: 'artists', offset: '0', limit: '1', numberOfTopResults: '1'},
                     headers: {
                         'x-rapidapi-host': 'spotify23.p.rapidapi.com',
                         'x-rapidapi-key': '8ab0ba4a09msh838d3cdc2c00a56p158278jsnc416649a319c'
                     }
                 };
               
-              axios.request(res).then(function (response) {
-                
-                   console.log(response.data);                
+                axios.request(res).then(function (response) {
+                    let searchName = response.data.artists.items[0].data.profile;
+                    let genres = response.data.artists.items[0].data.visuals.avatarImage.sources[0];
+                    let newgenres = genres 
+                    let newname = searchName
+                        commit('setapiValue2', newgenres);
+                        commit('setapiValue3', newname);
+                                   
                 //    console.log(response.data.query);
                 //    console.log(response.data.albums.items[i].data.name);
                 //    console.log(response.data.albums.items[i].data.coverArt.sources[2].url);
                 //    console.log(response.data.albums.items[i].data.date.year);  
-                  
-              }).catch(function (error) {
-                  console.error(error);
-              });
- 
-
-                  
+                   
+                    
+                }).catch(function (error) {
+                    console.error(error);
+                });                  
         },    
     }    
 

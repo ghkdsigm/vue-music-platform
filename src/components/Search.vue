@@ -13,6 +13,7 @@ export default {
             artist:'',
             number: 20,
             image:'',
+            pic:[]
         }
 
      },
@@ -25,6 +26,9 @@ export default {
                  artist: this.artist,
                  number: this.number,
                  image: this.image
+             }),
+             this.$store.dispatch('music/searchNewMusic', {
+                 title: this.title,
              }),
              location.href='#SearchResult'
          }

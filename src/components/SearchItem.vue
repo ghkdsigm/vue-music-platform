@@ -35,6 +35,7 @@ export default {
 
 <style lang="scss" scoped>
 img {
+    width:90%;
     height:220px;
     border:3px solid transparent;
     &:hover {

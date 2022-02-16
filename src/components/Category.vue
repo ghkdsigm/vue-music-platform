@@ -1,5 +1,5 @@
 <template>
-    <li class="music_list">
+    <li class="music_list" @click="onClick">
         <a>            
             <img src="https://music-phinf.pstatic.net/20181204_83/1543917552142Qd1y6_PNG/mood_1_NowHot.png?type=f360"/>
         </a>
@@ -53,7 +53,20 @@
 
 <script>
 export default {
-
+     data(){
+        return {
+            title:'bts'
+        }
+     },
+     methods:{        
+         async onClick(e){
+             // searchmovie.. 
+             e.preventDefault();   
+             this.$store.dispatch('music/searchNewMusic', {
+                 title: this.title
+             })
+         }
+     }
 }
 </script>
 
