@@ -98,8 +98,12 @@ img {
             .ls {
                 color:rgb(172, 172, 172);               
             }
+            &:nth-of-type(4){
+                text-align: center;
+                width:35%;
+            }
             &:last-child{
-                width:31%;
+                width:25%;
             }
         } 
         .artist {
