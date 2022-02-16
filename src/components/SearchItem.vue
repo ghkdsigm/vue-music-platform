@@ -37,7 +37,7 @@ export default {
 img {
     width:90%;
     height:220px;
-    border:3px solid transparent;
+    box-sizing:border-box;
     &:hover {
         border:3px solid #f953c6;
     }
@@ -45,4 +45,5 @@ img {
 .artistName {
     opacity: 0.6;
 }
+
 </style>

@@ -49,24 +49,23 @@ export default {
 
 <style lang="scss" scoped>
 img {
-        width:90%;
-        border:3px solid transparent;
+        width:100%;
+        box-sizing: border-box;
         &:hover {
             border:3px solid #f953c6;
         }
     }
 .music_list {
-    width:250px;
+    width:258px;
     display: inline-block;
-    padding: 0 0 50px 0;
+    padding: 50px 25px 0 0;
     box-sizing: border-box;
     vertical-align: top;  
-    text-align: center;
+    text-align: left;
     .info{
         text-overflow: ellipsis;
         word-break: break-all;
-        overflow: hidden;    
-        max-width: 200px;
+        overflow: hidden; 
         margin: 0 auto;
     }    
     .artistName {

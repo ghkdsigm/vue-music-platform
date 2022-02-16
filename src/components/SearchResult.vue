@@ -8,10 +8,10 @@
                 <img :src="pics.url" alt="">
             </div>
             <div class="text_area">
-                <div>
+                <p>
                     앨범 검색결과
-                </div>
-                <strong class="title">{{group.name}}</strong>
+                </p>
+                <strong class="title">' {{group.name}} '</strong>
             </div>
         </div> 
     </div>
@@ -49,31 +49,24 @@ export default {
 
 <style lang="scss" scoped>
 .end_title {
-    font-size:25px;
+    font-size:35px;
     font-weight: bold;
 }
 .music_list_wrap{
     display: flex;
-    margin-top:50px;
+    margin: 50px -25px 0 0;
     .inner{
         
         .music_list {
-            width:250px;
+            width:258px;
             display: inline-block;
             padding: 0 0 50px 0;
             box-sizing: border-box;
-            text-align: center;
+            text-align: left;
             vertical-align: top;  
             img {
-                widows: 90%;
-            }
-            .info{
-                text-overflow: ellipsis;
-                word-break: break-all;
-                overflow: hidden;  
-                max-width: 200px;  
-                margin: 0 auto;
-            }          
+                widows: 100%;
+            }       
         }
     }
 }
@@ -121,14 +114,12 @@ export default {
                 background-color: rgba(0,0,0,.55);
                 content: "";
             }
-            .genre{
-                background: #f953c6; /* fallback for old browsers */
-                background: -webkit-linear-gradient(to right, #f953c6, #b91d73); 
-                background: linear-gradient(to right, #f953c6, #b91d73); 
-                color:#fff;    
-                padding: 5px 25px;    
-                border-radius: 15px;    
+            p {                
+                color:#fff;       
                 position: relative;
+                margin-bottom:25px;
+                font-size:25px;
+                font-weight: 200;
             }
             .title {
                 overflow: hidden;
@@ -143,50 +134,13 @@ export default {
                 left: -2px;
                 max-height: 104px;
                 margin-top: 10px;
-                font-size: 43px;
+                font-size: 63px;
                 line-height: 52px;
                 letter-spacing: -.72px;
                 white-space: pre-line;
                 color: #fff;    
                 font-weight: 600;
-            }
-            .info{
-                overflow: hidden;
-                -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;
-                text-overflow: ellipsis;
-                white-space: normal;
-                word-break: break-all;
-                display: block;
-                display: -webkit-box;
-                position: relative;
-                height: 50px;
-                margin-top: 17px;
-                font-size: 18px;
-                line-height: 25px;
-                letter-spacing: -.5px;
-                color: hsla(0,0%,100%,.7);
-                word-break: keep-all;
-                font-weight:400;
-            }
-            .sub {
-                position: relative;
-                margin-top: 9px;
-                margin-left: 1px;
-                .item {
-                    display: inline-block;
-                    font-size: 15px;
-                    line-height: 18px;
-                    letter-spacing: -.3px;
-                    vertical-align: top;
-                    color: hsla(0,0%,100%,.6);
-                }
-            }
-            .linkTo{
-                position: absolute;
-                display: block;
-                margin-top: 25px;
-            }
+            }            
         }
     }
 }

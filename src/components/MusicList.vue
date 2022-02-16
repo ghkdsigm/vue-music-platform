@@ -19,6 +19,6 @@ export default {
 <style lang="scss" scoped>
 .music_list_wrap{
     display: flex;
-    margin-top:50px;
+    margin:50px -25px 50px 0;
 }
 </style>
