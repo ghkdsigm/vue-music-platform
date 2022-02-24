@@ -7,9 +7,13 @@
         </h1>
         <div class="my_menu">            
             <div id="menu_area">
+                <div class="profile_area">
+                    <!-- <a href="/KakaoLogin" class="link_login"><span class="text">로그인</span></a> -->
+                    <router-link to="/KakaoLogin" class="link_login"><span class="text">로그인</span></router-link>
+                </div>
                 <div class="search_area">
                     <Search />
-                </div>
+                </div>                
                 <div class="ly_menu">
                     <ul class="nav menu_list">
                         <li v-for="nav in navigations" :key="nav.name" class="menu_item">
@@ -24,7 +28,7 @@
                             </span>
                         </li>
                     </ul>
-                </div>
+                </div>                
             </div>
         </div>
     </header>
@@ -60,6 +64,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.profile_area {
+    width: 197px;
+    border: 1px solid hsla(0,0%,100%,.1);
+    border-width: 1px 0;
+    margin-top:15px;
+    .link_login {
+        display: block;
+        font-size: 15px;
+        padding: 11px 0;
+        line-height: 19px;
+        color: #999;
+        &::before {
+            background-position: -594px -168px;
+            width: 30px;
+            height: 30px;
+            margin: 0 10px 0 6px;
+            border-radius: 50%;
+            content: "";
+        }
+        .text {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+}
 .logo {
     font-family: "Oswald", sans-serif;
     font-size:25px;

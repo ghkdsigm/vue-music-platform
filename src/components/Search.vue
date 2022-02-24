@@ -1,6 +1,6 @@
 <template>
     <span class="input_area">
-        <input type="search" id="search_keyword" title="검색창" placeholder="앨범 검색" autocomplete="off" class="input_search" v-model="title" @keyup.enter="apply"/>
+        <input type="search" id="search_keyword" title="검색창" placeholder="앨범 검색" autocomplete="off" class="input_search" v-model="title" @keyup.enter.prevent="apply"/>
         <span class="icon_search"></span>                       
     </span>    
 </template>
@@ -20,7 +20,7 @@ export default {
      methods:{        
          async apply(e){
              // searchmovie.. 
-             e.preventDefault();   
+             //e.preventDefault();   
              this.$store.dispatch('music/searchMusics', {
                  title: this.title,
                  artist: this.artist,
@@ -30,7 +30,9 @@ export default {
              this.$store.dispatch('music/searchNewMusic', {
                  title: this.title,
              }),
-             location.href='#SearchResult'
+             
+             this.$router.push('/SearchResult') 
+             //location.href='/SearchResult'
          }
      }
 }
